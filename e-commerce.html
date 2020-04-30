@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script type="text/javascript">
+
+            function filter(){
+                $(".mobile").css("opacity","0.25");
+                var filters=[];
+                $(":checkbox:checked").each(function(i)
+                {
+                filters[i]=$(this).val();
+                $("."+filters[i]).css("opacity","1");
+                });
+                 }
+            function clearfilter(){
+                $(".mobile").css("opacity","1");
+                var filters=[];
+                $(":checkbox:checked").each(function(i){
+                    filters[i]=$(this).val();
+                    $("."+filters[i]).css("opacity","1");
+                });
+            }
+            </script>
+            
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="\style.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="row">
+    <div class="col-sm-2">  &nbsp; &nbsp;
+            <lable><strong>Manufacture</strong></lable> &nbsp; 
+            <div class="form-check-label">   &nbsp; &nbsp;           
+                    <input class="form-check-input" type="checkbox" value="Apple" id="defaultCheck1" onclick="filter()">
+                    <label class="form-check-label" for="defaultCheck1">
+                      Apple
+                    </label>
+                  </div>
+
+                  <div class="form-check-label">   &nbsp; &nbsp;             
+                        <input class="form-check-input" type="checkbox" value="Samsung" id="defaultCheck1"  onclick="filter()">
+                        <label class="form-check-label" for="defaultCheck1">
+                          Samsung
+                        </label>
+                      </div>
+                      <div class="form-check-label">  &nbsp; &nbsp;            
+                            <input class="form-check-input" type="checkbox" value="HTC" id="defaultCheck1"  onclick="filter()">
+                            <label class="form-check-label" for="defaultCheck1">                               
+                              HTC
+                            </label>
+                          </div>
+                          <div class="form-check-label" >  &nbsp; &nbsp;            
+                                <input class="form-check-input" type="checkbox" value="Nokia" id="defaultCheck1" onclick="filter()">
+                                <label class="form-check-label" for="defaultCheck1">
+                                  Nokia
+                                </label>
+                              </div>
+                              <div class="form-check-label" >   &nbsp; &nbsp;             
+                                    <input class="form-check-input" type="checkbox" value="Sony" id="defaultCheck1" onclick="filter()">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                      Sony
+                                    </label>
+                                  </div>&nbsp;&nbsp;
+
+             <lable><strong>Internal Space</strong></lable>  &nbsp; &nbsp;   
+            <div class="form-check-label">  &nbsp; &nbsp;         
+                    <input class="form-check-input" type="checkbox" value="16GB" id="defaultCheck1"  onclick="filter()"> 
+                    <label class="form-check-label" for="defaultCheck1">
+                      16GB
+                    </label>
+                  </div>
+
+                  <div class="form-check-label"> &nbsp; &nbsp;               
+                        <input class="form-check-input" type="checkbox" value="32GB" id="defaultCheck1"  onclick="filter()">
+                        <label class="form-check-label" for="defaultCheck1">
+                          32GB
+                        </label>
+                      </div>&nbsp;&nbsp;
+
+ <lable><strong>OS</strong></lable>
+                      <div class="form-check-label"> &nbsp; &nbsp;            
+                              <input class="form-check-input" type="checkbox" value="Android" id="defaultCheck1"  onclick="filter()">
+                              <label class="form-check-label" for="defaultCheck1">
+                                Android
+                              </label>
+                            </div>
+          
+                            <div class="form-check-label"> &nbsp; &nbsp;              
+                                  <input class="form-check-input" type="checkbox" value="IOS" id="defaultCheck1"  onclick="filter()">
+                                  <label class="form-check-label" for="defaultCheck1">
+                                    iOS
+                                  </label>
+                                </div>
+                                <div class="form-check-label">        &nbsp; &nbsp;           
+                                        <input class="form-check-input" type="checkbox" value="Windows" id="defaultCheck1"  onclick="filter()">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                          Windows
+                                        </label>
+                                      </div>  &nbsp; &nbsp;   
+                        <!-- <span><button class="btn-primary" value="clearfilter" onclick="clearfilter()">Clear Filters</button></span> -->
+                        <button input type="reset" name="reset" value="Clear filter" onclick="clearfilter()">Clear Filters</button></span>
+
+
+    </div>
+	
+	
+    <div class="col-sm-10">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="mobile Apple 16GB IOS ">
+        <div class="card Apple" style="width: 15rem;margin:4px;">
+            <!-- Button trigger modal -->
+<button data-toggle="modal" data-target="#exampleModalCenter"><img style="width:200px;height:155px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR6X0eYzNtwfKAUTBqLpWwnlrZzXsAq-Wd5NEvoKKf6x46DUKx6VgxUMPipPA&usqp=CAc" alt="Card image cap">
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">iPhone</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                    <img style="width:240px;height:195px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR6X0eYzNtwfKAUTBqLpWwnlrZzXsAq-Wd5NEvoKKf6x46DUKx6VgxUMPipPA&usqp=CAc" alt="Card image cap">
+                    <br>
+                    <p>The iPhone is a smartphone made by Apple that combines a computer, 
+                        iPod, digital camera and cellular phone into one device with a touchscreen interface.
+                         The iPhone runs the iOS operating system (OS), and as of 2017, there were 2.2 million 
+                         apps available for it through the Apple App Store, according to Statista.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+                <!-- <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR6X0eYzNtwfKAUTBqLpWwnlrZzXsAq-Wd5NEvoKKf6x46DUKx6VgxUMPipPA&usqp=CAc" alt="Card image cap"> -->
+                <div class="card-body">
+                  <h5 class="card-title">iPhone 11Pro</h5>
+                  <p class="card-text">Manufacture:Apple<br>
+                                        Storage:16GB<br>
+                                        OS:IOS<br> 
+                                         Camera:28 Mpx   </p>
+                  <span style="float:right;">Rs. 109,900</span>
+                </div>
+              </div>&nbsp;&nbsp;
+            </div><br>
+        </div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="mobile Nokia 16GB Windows ">
+              <div class="card" style="width: 15rem;margin:4px">
+                    <!-- <div class="card Apple" style="width: 15rem;margin:4px;"> -->
+                            <!-- Button trigger modal -->
+                <button data-toggle="modal" data-target="#exampleModal"><img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9hRrHcTaoBt5Qgfyw6tDsn-nG56xPCEcdRSJN8YvWw6_NH5YX&usqp=CAU" alt="Card image cap">
+
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Nokia</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                    <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9hRrHcTaoBt5Qgfyw6tDsn-nG56xPCEcdRSJN8YvWw6_NH5YX&usqp=CAU" alt="Card image cap">
+                                    <br>
+                                    <p>Nokia Corporation is the world's largest manufacturer of mobile phones, 
+                                        serving customers in 130 countries. Nokia is divided into four business groups: Mobile Phones, Multimedia, Enterprise Solutions, and Networks.
+                                         The Mobile Phones group markets wireless voice and data products in consumer and corporate markets.</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS9hRrHcTaoBt5Qgfyw6tDsn-nG56xPCEcdRSJN8YvWw6_NH5YX&usqp=CAU" alt="Card image cap"> -->
+                    <div class="card-body">
+                      <h5 class="card-title">Nokia</h5>
+                      <p class="card-text">Manufacture:Nokia<br>
+                        Storage:16GB<br>
+                        OS:Windows<br> 
+                         Camera:28 Mpx   </p>
+  <span style="float:right;">Rs. 40,900</span>
+                    </div>
+                  </div>&nbsp;&nbsp;
+
+                </div><br>
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="mobile Samsung 16GB Android ">
+                  <div class="card" style="width: 15rem;margin:4px">
+                        <button data-toggle="modal" data-target="#exampleCenter"> <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOU9DXLQ-gn8AL7U0gcUThS2QxnlMTE3K0HpeWiQOAdeADA99_&usqp=CAU" alt="Card image cap">
+
+
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Samsung</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                    <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOU9DXLQ-gn8AL7U0gcUThS2QxnlMTE3K0HpeWiQOAdeADA99_&usqp=CAU" alt="Card image cap">
+                                    <br>
+                                      <p>Samsung, South Korean company that is one of the world's largest producers of electronic devices.
+                                           Samsung specializes in the production of a wide variety of consumer and industry electronics, 
+                                          including appliances, digital media devices, semiconductors, memory chips, and integrated systems.</p>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTOU9DXLQ-gn8AL7U0gcUThS2QxnlMTE3K0HpeWiQOAdeADA99_&usqp=CAU" alt="Card image cap"> -->
+                        <div class="card-body">
+                          <h5 class="card-title">Samsung</h5>
+                          <p class="card-text">Manufacture:Samsung<br>
+                            Storage:16GB<br>
+                            OS:Android<br> 
+                             Camera:32 Mpx   </p>
+      <span style="float:right;">Rs. 65,000</span>
+                        </div>
+                      </div>&nbsp;&nbsp;
+
+                    </div><br>
+</div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                            <div class="mobile Samsung 32GB Android ">
+                            <div class="card" style="width: 15rem;margin:4px">
+                                    <button data-toggle="modal" data-target="#exampleModalCen">  <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxTgI9Bz8aEjZSPXGn5KWRR9LXqif3qq_SsH-0ZUafx9JtW3hp&usqp=CAU" alt="Card image cap">
+
+                                    </button>
+                                    
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="exampleModalCen" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                      <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Samsung</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                              <span aria-hidden="true">&times;</span>
+                                            </button>
+                                          </div>
+                                          <div class="modal-body">
+                                                <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxTgI9Bz8aEjZSPXGn5KWRR9LXqif3qq_SsH-0ZUafx9JtW3hp&usqp=CAU" alt="Card image cap">
+                                                <br>
+                                                  <p>Samsung, South Korean company that is one of the world's largest producers 
+                                                      of electronic devices. Samsung specializes in the production of a wide variety 
+                                                      of consumer and industry electronics, including appliances,
+                                                       digital media devices, semiconductors, memory chips, and integrated systems.</p>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                            <!-- <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTxTgI9Bz8aEjZSPXGn5KWRR9LXqif3qq_SsH-0ZUafx9JtW3hp&usqp=CAU" alt="Card image cap"> -->
+                            <div class="card-body">
+                              <h5 class="card-title">Samsung</h5>
+                              <p class="card-text">Manufacture:Samsung<br>
+                                Storage:32GB<br>
+                                OS:Android<br> 
+                                 Camera:34 Mpx   </p>
+          <span style="float:right;">Rs. 55,000</span>
+                            </div>
+                          </div>&nbsp;&nbsp;
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-10 ">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                        <div class="mobile Apple 32GB iOS ">
+                                        <div class="card" style="width: 15rem;margin:4px">
+                                                <button data-toggle="modal" data-target="#ModalCenter">  <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcST_fHP47sIWWdnV68W8BR6y-VXvElXkKzKxI1xMwsof0jB2xN0&usqp=CAU" alt="Card image cap">
+
+                                                </button>
+                                                
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                  <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLongTitle">iPhone</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                            <img style="width:150px;height:150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcST_fHP47sIWWdnV68W8BR6y-VXvElXkKzKxI1xMwsof0jB2xN0&usqp=CAU" alt="Card image cap">
+                                                            <br>
+                                                              <p>The iPhone is a smartphone made by Apple that combines a computer, 
+                                                                  iPod, digital camera and cellular phone into one device with a touchscreen interface.
+                                                                   The iPhone runs the iOS operating system (OS), and as of 2017, there were 2.2 million 
+                                                                   apps available for it through the Apple App Store, according to Statista.</p>
+																   
+                                                      </div>
+													   </div>
+													    </div>
+														 </div>
+														  </div>
+														   </div>
+														    </div>
+															 </div>
+															  </div>
+															   </div>
+															    
+															<br>
+															<div class="parallax"></div> 
+<div style="height:850px;font-size:25px;"> 
+<center>
+<div id="slideshow">
+  <div class="slide-wrapper">
+    <div class="slide"><img src ="https://d13dtqinv406lk.cloudfront.net/company/images/1207.jpg" width="100%" height="100%"><h1 class="slide-number">1</h1></div>
+  </div>
+</div>
+
+
+<div style="text-align:center;border:1px solid red;">
+
+<p>Mindtree Limited is an Indian multinational information technology and outsourcing company headquartered in Bangalore,India</p>
+</div>
+<br>
+<table border="15" width="100%" 
+       style="background-color: aqua; border-color: red blue gold teal;">
+
+   <tr> <td>First Name</td> <td>Last Name</td> <td>Age</td> </tr>
+   <tr> <td>Arya</td> <td>Laxmi</td> <td>22</td> </tr>
+   <tr> <td>Kishu</td> <td>Kumar</td> <td>18</td> </tr>
+   <tr> <td>Annu</td> <td>Kumar</td> <td>24</td> </tr>
+</table>
+<div class="container">
+  <img src="https://www.mindtree.com/sites/default/files/2020-04/mindtree-logo-tagline-PNG.png" alt="mindtree" class="image1" style="width:30%">
+</div> 
+</center>
+													  <div class="modal-footer">
+ 
+													  
+													   
+
+                                            
+													  
+
+</body>
+</html>
+
+
+
+
